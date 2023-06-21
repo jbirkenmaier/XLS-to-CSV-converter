@@ -14,7 +14,7 @@ def find_XLS_files():
     xls_file_list = [element.strip('.XLS') for element in xls_file_list]
     return xls_file_list
 
-def read_data(names_of_sheets, column_x=1,column_y=2):
+def read_data(names_of_sheets):
     contents=[]
     for sheet in names_of_sheets:
         book= xlrd.open_workbook('%s.XLS'%sheet)
