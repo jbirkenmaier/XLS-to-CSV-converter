@@ -1,4 +1,9 @@
 import function_library as fl
 
 
-print(fl.find_XLS_files())
+file = fl.find_XLS_files()
+
+fl.read_data(file)
+
+
+
