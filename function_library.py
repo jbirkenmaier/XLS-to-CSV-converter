@@ -28,7 +28,7 @@ def read_data(names_of_sheets, column_x=1,column_y=2):
         with open('%s.csv'%sheet, "w") as datafile:
             datafile.close()
         
-        for row in range(len_of_file-1):
+        for row in range(len_of_file):
             with open('%s.csv'%sheet, "a+") as datafile:
                 for i in range(num_of_cols):
                     datafile.write(str(contents[i][row])+',')
