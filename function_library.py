@@ -1,5 +1,19 @@
 import numpy as np
 import xlrd
+import os
+import xlrd
+
+
+def find_XLS_files():
+    xls_file_list = []
+
+    for element in os.listdir():
+        file_object = os.path.isfile(element)
+
+        if file_object == True and element.endswith('.XLS'):
+            xls_file_list.append(str(element))
+
+    xls_file_list = [element.strip('.XLS') for element in xls_file_list]
 
 def read_data(names_of_sheets, column_x=1,column_y=2):
     for sheet in names_of_sheets:
