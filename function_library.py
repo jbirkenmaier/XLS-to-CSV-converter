@@ -23,7 +23,7 @@ def read_data(names_of_sheets, column_x=1,column_y=2):
         num_of_cols = sh.ncols
 
         for i in range(num_of_cols):
-            contents.append([sh.cell_value(rowx=j, colx=i) for j in range(len_of_file)][1:])
+            contents.append([sh.cell_value(rowx=j, colx=i) for j in range(len_of_file)])
 
         with open('%s.csv'%sheet, "w") as datafile:
             datafile.close()
